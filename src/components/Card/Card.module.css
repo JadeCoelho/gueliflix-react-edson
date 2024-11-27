@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    justify-content: center;
+    margin: 0 .3rem;
+}
+
+.card img{
+    border-radius: 8px;
+    height: 140px;
+}
+
+.card img:hover{
+    scale: 1.05;
+    box-shadow: 0 0 10px #171717;
+}
