@@ -1,6 +1,7 @@
 import styles from "./SearchList.module.css";
 import List from "../List/List";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Loader from "../Loader/Loader";
 
 function filterVideos(videos, text) {
   if (!text.trim()) return videos;
@@ -12,6 +13,14 @@ function filterVideos(videos, text) {
 function SearchList({ videos }) {
   const [text, setText] = useState("");
   const result = filterVideos(videos, text);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
     <section className={styles.searchList}>
       <input
@@ -21,7 +30,11 @@ function SearchList({ videos }) {
         onChange={(e) => setText(e.target.value)}
       />
 
-      <List videos={result} emptyField={`Sem vídeos sobre "${text}"`} />
+      {loading ? (
+        <Loader />
+      ) : (
+        <List videos={result} emptyField={`Sem vídeos sobre "${text}"`} />
+      )}
     </section>
   );
 }

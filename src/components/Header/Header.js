@@ -14,6 +14,8 @@ function Header() {
       <nav>
         <Link to="/">Início</Link>
         <Link to="/search">Pesquisar</Link>
+        <Link to="/favorites">Favoritos</Link>
+        <Link to="/add">Cadastrar</Link>
         {/* <Link to="/watch">Assistir</Link> */}
       </nav>
     </header>

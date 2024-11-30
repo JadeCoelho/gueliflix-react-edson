@@ -1,15 +1,32 @@
-.card{
-    display: flex;
-    justify-content: center;
-    margin: 0 .3rem;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.3rem;
+  position: relative;
 }
 
-.card img{
-    border-radius: 8px;
-    height: 140px;
+.capa {
+  border-radius: 8px;
+  height: 140px;
 }
 
-.card img:hover{
-    scale: 1.05;
-    box-shadow: 0 0 10px #171717;
+.capa:hover {
+  scale: 1.05;
+  box-shadow: 0 0 10px #171717;
+}
+
+figure .icon{
+  position: relative;
+  width: 30px;
+}
+
+.icon img{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px #ff1919);
 }

@@ -1,0 +1,25 @@
+form div{
+    display: flex;
+    flex-direction: column;
+    margin: 1.3rem auto;
+    gap: .5rem;
+    align-items: center;
+}
+
+
+
+button{
+    padding: .8rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #f20202;
+    color: #f1f1f1;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #c40404;
+}

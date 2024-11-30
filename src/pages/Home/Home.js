@@ -8,10 +8,12 @@ import Category, {
 } from "../../components/Category/Category";
 import Card from "../../components/Card/Card";
 import Carousel from "../../components/Carousel/Carousel";
+import ScrollButton from "../../components/ScrollButton/ScrollButton";
+import styles from "./Home.module.css"
 
 function Home() {
   return (
-    <div>
+    <div className={styles.bx}>
       <Header />
       <Banner image="https://miro.medium.com/v2/resize:fit:1400/1*i0NbyT3x5k8nVMb8ShzgLw.png" />
       <Container>
@@ -26,6 +28,7 @@ function Home() {
         ))}
       </Container>
       <Footer />
+      <ScrollButton />
     </div>
   );
 }
